@@ -8,7 +8,7 @@ This repository presents a comprehensive end-to-end machine learning project, gu
 
 ## Project Workflow
 
-1. **Data Acquisition**  
+1. **Data Ingestiong**  
         Gather raw data from reliable sources.
 
 2. **Data Preprocessing**  
@@ -45,5 +45,24 @@ This repository presents a comprehensive end-to-end machine learning project, gu
 Clone the repository and follow the instructions in the notebooks and scripts to reproduce the results or adapt the workflow to your own dataset.
 
 ---
+
+## Folder Structure Workflow
+
+**Src Folder**  
+    The `src/` directory contains the following files:
+    - `data_ingestion.py`
+    - `data_preprocessing.py`
+    - `exception.py`
+    - `logging.py`
+    - `eda.py`
+    - `feature_engineering.py`
+    - `model_building.py`
+    - `model_evaluation.py`
+    - `model_deployment.py`
+    - `monitoring.py`
+    - `utils.py`
+
+**Setup.py**  
+       All the package buidling material and requirements to use libraries
 
 *Empowering data-driven solutions through a structured and transparent ML pipeline.*
