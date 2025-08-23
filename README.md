@@ -59,7 +59,7 @@ Clone the repository and follow the instructions in the notebooks and scripts to
     - `model_building.py`
     - `model_evaluation.py`
     - `model_deployment.py`
-    - `monitoring.py`
+    - `monitoring.pygit`
     - `utils.py`
 
 **Setup.py**  
