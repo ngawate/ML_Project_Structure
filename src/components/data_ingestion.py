@@ -7,6 +7,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+from src.utils import save_object, evaluate_model
+from src.components.model_trainer import Model_Trainer, Model_Trainer_Config
 
 @dataclass
 class DataIngestionConfig:
@@ -42,7 +44,6 @@ class DataIngestion:
             logging.error(e)
             raise CustomException(e, sys)
 
-'''
 if __name__ == "__main__":
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
@@ -50,4 +51,6 @@ if __name__ == "__main__":
     data_tranform_obj = DataTransformation()
     train_arr, test_arr, save_path = data_tranform_obj.initiate_data_transformation(train_data, test_data)
 
-    print(train_arr, test_arr, save_path)'''
+    model_trainer_obj = Model_Trainer()
+    model_name, accuracy = model_trainer_obj.initiate_model_training(train_arr, test_arr)
+    print(f'Best Model Found , Model Name : {model_name} , Accuracy : {accuracy}')
